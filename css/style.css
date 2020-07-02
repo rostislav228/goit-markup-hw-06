@@ -178,7 +178,7 @@ img {
 .active,
 .header-ul .link::after {
   position: absolute;
-  bottom: -2px;
+  bottom: 0px;
 
   width: 100%;
   height: 4px;
@@ -222,11 +222,16 @@ img {
   color: var(--text-hover-color);
   font-family: Raleway, sans-serif;
 }
-.contact-link {
-  color: var(--primary-text-color);
-
+.header-ul .contact-link {
+  display: inline-flex;
+  align-items: center;
   font-weight: 500;
-  letter-spacing: 0.02em;
+  font-size: 14px;
+  color: var(--primary-text-color);
+  line-height: 1.14;
+  text-decoration: none;
+  margin-left: auto;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .flex-link {
@@ -236,12 +241,14 @@ img {
 .icon-envelope {
   width: 16px;
   height: 11.2px;
+  margin-right: 10px;
   fill: currentColor;
 }
 
 .icon-smartphone {
-  width: 18px;
+  width: 10px;
   height: 15px;
+  margin-right: 10px;
   fill: currentColor;
 }
 
@@ -594,6 +601,9 @@ img {
 }
 
 .checkbox-field {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin-top: 20px;
 }
 
@@ -652,7 +662,7 @@ img {
   display: inline-block;
   width: 15px;
   height: 15px;
-  margin-right: 5px;
+  margin-right: 7px;
 
   border: 1.5px solid #2a2a2a;
   border-radius: 1px;
