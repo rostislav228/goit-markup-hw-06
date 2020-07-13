@@ -1,0 +1,150 @@
+.header {
+  background-color: $whiteColorText;
+}
+
+.main-header {
+  display: flex;
+  align-items: center;
+}
+
+.header-ul {
+  display: flex;
+}
+
+.header-ul .item:not(:last-child) {
+  margin-right: 50px;
+}
+
+.contact {
+  margin-left: auto;
+  align-items: center;
+}
+
+.contact .item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.nav .link {
+  color: $secondaryBackgroundColor;
+  @include font(500, 14, 1.14, 00.02em);
+
+  transition: $transition;
+
+  &:hover,
+  &:focus {
+    color: $textHoverColor;
+
+    transition: $transition;
+  }
+}
+
+.header-ul .contact-link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
+  transition: $transition;
+}
+
+.active {
+  position: absolute;
+  bottom: 0px;
+
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+
+  background-color: $textHoverColor;
+}
+
+.header-ul .link {
+  position: relative;
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
+  color: $secondaryTextColor;
+  transition: $transition;
+
+  &:hover::after {
+    opacity: 1;
+    transform: scaleX(1);
+
+    transition: $transition;
+  }
+
+  &::after {
+    position: absolute;
+    display: block;
+    content: "";
+
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    bottom: 0px;
+
+    background-color: $textHoverColor;
+    opacity: 0;
+    transform: scaleX(0);
+    transition: $transition;
+  }
+}
+
+.logo {
+  display: inline-block;
+  margin-right: 80px;
+
+  color: $secondaryTextColor;
+  font-family: Raleway, sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+}
+
+.logo-web {
+  color: $textHoverColor;
+  font-family: Raleway, sans-serif;
+}
+
+.header-ul .contact-link {
+  display: inline-flex;
+  align-items: center;
+
+  @include font(500, 14px, 1.14);
+
+  text-decoration: none;
+  margin-left: auto;
+  color: $primaryTextColor;
+  transition: color $transition;
+
+  &:hover,
+  &:focus {
+    color: $textHoverColor;
+
+    transition: $transition;
+  }
+}
+
+.link.active-link {
+  color: $textHoverColor;
+
+  transition: $transition;
+}
+
+.flex-link {
+  display: flex;
+}
+
+.icon-envelope {
+  width: 16px;
+  height: 11.2px;
+  margin-right: 10px;
+  fill: currentColor;
+}
+
+.icon-smartphone {
+  width: 10px;
+  height: 15px;
+  margin-right: 10px;
+  fill: currentColor;
+}

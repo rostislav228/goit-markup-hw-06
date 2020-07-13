@@ -1,0 +1,157 @@
+.logo-footer {
+  color: $whiteColorText;
+  font-family: Raleway, sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 1.18;
+}
+
+.address {
+  display: flex;
+  flex-direction: column;
+
+  color: $whiteColorText;
+  @include font(400, 14px, 1.71);
+
+  margin-top: 10px;
+}
+
+.address-link {
+  color: $addressTextColor;
+
+  margin-top: 9px;
+}
+
+.copyright {
+  display: block;
+  padding-top: 21px;
+  padding-bottom: 21px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+
+  color: rgba(255, 255, 255, 0.4);
+  @include font(400, 12px, 2, center);
+}
+
+.b {
+  display: block;
+  color: $whiteColorText;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.footer__social-networks {
+  display: flex;
+  margin-top: 21px;
+}
+
+.footer__social-networks .element {
+  margin-right: 10px;
+}
+
+.footer__social-networks .element:nth-last-child(1) {
+  margin-right: 0px;
+}
+
+.footer__social-networks .link {
+  display: inline-flex;
+  width: 44px;
+  height: 44px;
+
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 20px;
+  fill: $whiteColorText;
+
+  transition: $transition;
+
+  &:hover,
+  &:focus {
+    background-color: $textHoverColor;
+
+    transition: $transition;
+  }
+}
+
+#icon-instagram,
+#icon-twitter,
+#icon-facebook,
+#icon-linkedin,
+#icon-logo-1 {
+  fill: currentColor;
+}
+
+.footer-container {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  padding-bottom: 28px;
+}
+
+.footer {
+  background-color: #2f303a;
+  padding-top: 48px;
+}
+
+.footer-mail {
+  width: 358px;
+  height: 50px;
+  padding-left: 16px;
+  opacity: 1;
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-sizing: border-box;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  color: rgba(255, 255, 255, 0.6);
+
+  background-color: transparent;
+}
+
+.footer .field {
+  position: relative;
+  margin-top: 20px;
+}
+
+.footer-place {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 1;
+
+  @include font(400, 16px, 1.3);
+
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.flex {
+  display: flex;
+}
+
+.footer .button.primary {
+  display: flex;
+  width: 215px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+  margin-top: 20px;
+  margin-left: 12px;
+}
+
+.icon-send {
+  display: inline-block;
+  margin-left: 10px;
+  width: 24px;
+  height: 24px;
+}
+
+.field:focus-within > .footer-place,
+.footer-mail:not(:placeholder-shown) + .footer-place {
+  opacity: 0;
+  transition: $transition;
+
+  @include font(400, 12px, 1.17);
+
+  color: $textHoverColor;
+}

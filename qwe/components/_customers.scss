@@ -1,0 +1,54 @@
+.customers {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.customers .element {
+  margin-right: 30px;
+  width: 170px;
+  height: 90px;
+
+  transition: $transition;
+}
+
+.customers-link {
+  display: block;
+  fill: #afb1b8;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+
+  transition: $transition;
+
+  &:focus {
+    border-color: $textHoverColor;
+    fill: $textHoverColor;
+
+    transition: $transition;
+  }
+
+  .customers &:hover {
+    border-color: $textHoverColor;
+    fill: $textHoverColor;
+
+    transition: $transition;
+  }
+}
+
+.icon {
+  width: 170px;
+  height: 90px;
+}
+
+#icon-logo-1,
+#icon-logo-2,
+#icon-logo-3,
+#icon-logo-4,
+#icon-logo-5,
+#icon-logo-6 {
+  fill: currentColor;
+}
+
+.customers .element:nth-child(6n) {
+  margin-right: 0px;
+}

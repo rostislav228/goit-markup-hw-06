@@ -1,0 +1,43 @@
+.flex-featurest {
+  display: flex;
+}
+
+.flex-featurest .element {
+  width: 278px;
+  margin-right: 30px;
+}
+
+.section-title.features {
+  color: $secondaryTextColor;
+  @include font(700, 14px, 1.14);
+  text-transform: uppercase;
+  text-align: start;
+
+  margin-top: 30px;
+}
+
+.text.features {
+  @include font(400, 14px, 1.71);
+
+  margin-top: 10px;
+}
+
+.icon-antenna::before {
+  @include icon(antenna);
+  background-color: $secondaryBackgroundColor;
+}
+
+.icon-clock::before {
+  @include icon(clock);
+  background-color: $secondaryBackgroundColor;
+}
+
+.icon-diagram::before {
+  @include icon(diagram);
+  background-color: $secondaryBackgroundColor;
+}
+
+.icon-astronaut::before {
+  @include icon(astronaut);
+  background-color: $secondaryBackgroundColor;
+}
