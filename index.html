@@ -34,10 +34,56 @@
               <a href="#" class="link">Контакты</a>
             </li>
           </ul>
+          <button type="button" class="menu-button" data-menu-button>
+            <svg width="40" height="40">
+              <use
+                class="icon-menu"
+                href="./images/symbol-defs1.svg#icon-menu"
+              ></use>
+              <use
+                class="icon-close-menu"
+                href="./images/symbol-defs1.svg#icon-close-menu"
+              ></use>
+            </svg>
+          </button>
+          <div class="menu-container" data-menu>
+            <ul class="list menu-nav">
+              <li class="item">
+                <a href="./index.html" class="link active-link">
+                  Студия
+                  <div class="active"></div>
+                </a>
+              </li>
+              <li class="item">
+                <a href="./portfolio.html" class="link">Портфолио </a>
+              </li>
+              <li class="item">
+                <a href="#" class="link">Контакты</a>
+              </li>
+            </ul>
+            <ul class="list contact">
+              <li class="item">
+                <a href="mailto:info@devstudio.com" class="contact-link">
+                  <svg class="icon-envelope">
+                    <use href="./images/symbol-defs1.svg#icon-envelope"></use>
+                  </svg>
+                  info@devstudio.com
+                </a>
+              </li>
+              <li class="item">
+                <a href="tel:+380961111111" class="contact-link">
+                  <svg class="icon-smartphone">
+                    <use href="./images/symbol-defs1.svg#icon-smartphone"></use>
+                  </svg>
+                  +38 096 111 11 11
+                </a>
+              </li>
+            </ul>
+          </div>
         </nav>
         <ul class="list header-ul contact">
           <li class="item">
-            <a href="mailto:info@devstudio.com" class="contact-link flex-link">
+            <a href="mailto:info@devstudio.com" class="contact-link">
               <svg class="icon-envelope">
                 <use href="./images/symbol-defs1.svg#icon-envelope"></use>
               </svg>
@@ -121,7 +167,7 @@
                 <label class="field checkbox-field">
                   <input class="visualli-hidden checkbox" type="checkbox" />
                   <span class="icn"></span>
-                  <span
+                  <span class="checkbox-label"
                     >Соглашаюсь с рассылкой и принимаю
                     <a class="chec" href="">Условия договора</a></span
                   >
@@ -241,7 +287,7 @@
                 <h3 class="section-title specialist">
                   Николай Кучеренко
                 </h3>
-                <p class="specialist name">
+                <p class="specialist specialist-name">
                   Product Designer
                 </p>
                 <!--соц.сети -->
@@ -308,7 +354,7 @@
                 <h3 class="section-title specialist">
                   Ольга Иванова
                 </h3>
-                <p class="specialist name">
+                <p class="specialist specialist-name">
                   Frontend Developer
                 </p>
                 <!--соц.сети -->
@@ -375,7 +421,7 @@
                 <h3 class="section-title specialist">
                   Андрей Шевченко
                 </h3>
-                <p class="specialist name">
+                <p class="specialist specialist-name">
                   Marketing
                 </p>
                 <!--соц.сети -->
@@ -442,7 +488,7 @@
                 <h3 class="section-title specialist">
                   Иван Николаев
                 </h3>
-                <p class="specialist name">
+                <p class="specialist specialist-name">
                   UI Designer
                 </p>
                 <!--соц.сети -->
@@ -592,57 +638,59 @@
     <!--подвал-->
     <footer class="footer">
       <div class="container footer-container">
-        <div>
-          <a href="./index.html" class="logo-footer">
-            <span class="logo-web">Web</span>
-            Studio
-          </a>
-          <!-- адресс -->
-          <address class="address">
-            <p>
-              г. Киев, пр-т Леси Украинки, 26
-            </p>
-            <a href="mailto:info@devstudio.com" class="address-link">
-              info@devstudio.com
+        <div class="footer-tablet">
+          <div class="footer-div">
+            <a href="./index.html" class="logo-footer">
+              <span class="logo-web">Web</span>
+              Studio
             </a>
-            <a href="tel:+380961111111" class="address-link"
-              >+38 096 111 11 11</a
-            >
-          </address>
-        </div>
-        <div>
-          <b class="b"> присоединяйтесь </b>
-          <!-- соц.сети -->
-          <ul class="list footer__social-networks">
-            <li class="element">
-              <a href="#" aria-label="instagram" class="link icon-instagram">
-                <svg class="icon-instagram">
-                  <use href="./images/symbol-defs1.svg#icon-instagram"></use>
-                </svg>
+            <!-- адресс -->
+            <address class="address">
+              <p class="address-text">
+                г. Киев, пр-т Леси Украинки, 26
+              </p>
+              <a href="mailto:info@devstudio.com" class="address-link">
+                info@devstudio.com
               </a>
-            </li>
-            <li class="element">
-              <a href="#" aria-label="twitter" class="link icon-twitter">
-                <svg class="icon-twitter">
-                  <use href="./images/symbol-defs1.svg#icon-twitter"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="element">
-              <a href="#" aria-label="facebook" class="link icon-facebook">
-                <svg class="icon-facebook">
-                  <use href="./images/symbol-defs1.svg#icon-facebook"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="element">
-              <a href="#" aria-label="linkedin" class="link icon-linkedin">
-                <svg class="icon-linkedin">
-                  <use href="./images/symbol-defs1.svg#icon-linkedin"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
+              <a href="tel:+380961111111" class="address-link"
+                >+38 096 111 11 11</a
+              >
+            </address>
+          </div>
+          <div class="footer-div">
+            <b class="b"> присоединяйтесь </b>
+            <!-- соц.сети -->
+            <ul class="list footer__social-networks">
+              <li class="element">
+                <a href="#" aria-label="instagram" class="link icon-instagram">
+                  <svg class="icon-instagram">
+                    <use href="./images/symbol-defs1.svg#icon-instagram"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="element">
+                <a href="#" aria-label="twitter" class="link icon-twitter">
+                  <svg class="icon-twitter">
+                    <use href="./images/symbol-defs1.svg#icon-twitter"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="element">
+                <a href="#" aria-label="facebook" class="link icon-facebook">
+                  <svg class="icon-facebook">
+                    <use href="./images/symbol-defs1.svg#icon-facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="element">
+                <a href="#" aria-label="linkedin" class="link icon-linkedin">
+                  <svg class="icon-linkedin">
+                    <use href="./images/symbol-defs1.svg#icon-linkedin"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
         <div>
           <b class="b">
@@ -666,7 +714,6 @@
           </div>
         </div>
       </div>
-      <p class="copyright container">2020 | Developed by GoIT Students</p>
     </footer>
 
     <script>
@@ -696,6 +743,22 @@
 
             e.currentTarget.reset();
           });
+      })();
+    </script>
+    <script>
+      (() => {
+        const menuBtnRef = document.querySelector("[data-menu-button]");
+        const mobileMenuRef = document.querySelector("[data-menu]");
+
+        menuBtnRef.addEventListener("click", () => {
+          const expanded =
+            menuBtnRef.getAttribute("aria-expanded") === "true" || false;
+
+          menuBtnRef.classList.toggle("is-open");
+          menuBtnRef.setAttribute("aria-expanded", !expanded);
+
+          mobileMenuRef.classList.toggle("is-open");
+        });
       })();
     </script>
   </body>
